@@ -2,9 +2,9 @@
   <%= link_to(
       I18n.t("datagrid.table.order.asc").html_safe,
       url_for(grid.param_name => grid.as_query.merge(:order => column.name, :descending => false)),
-      :class => "asc", remote: options[:remote].nil? ? false : true) %>
+      :class => "asc", remote: true) %>
   <%= link_to(
       I18n.t("datagrid.table.order.desc").html_safe,
       url_for(grid.param_name => grid.as_query.merge(:order => column.name, :descending => true )),
-      :class => "desc", remote: options[:remote].nil? ? false : true) %>
+      :class => "desc", remote: true) %>
 </div>
