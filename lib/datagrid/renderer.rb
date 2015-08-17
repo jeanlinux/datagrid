@@ -79,7 +79,7 @@ module Datagrid
 
     def order_for(grid, column, options = {})
       _render_partial('order_for', options[:partials],
-                      { :grid => grid, :column => column })
+                      { :grid => grid, :column => column, options: options })
     end
 
     private
